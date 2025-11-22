@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abush Bingo</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>🎯 Abush Bingo</h1>
+            <div class="game-controls">
+                <button id="startBtn" class="btn btn-primary">Start Game</button>
+                <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                <button id="autoBtn" class="btn btn-success">Auto Play</button>
+            </div>
+        </header>
+
+        <div class="game-stats">
+            <div class="stat-box">
+                <span class="stat-label">Numbers Called:</span>
+                <span id="calledCount" class="stat-value">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Current Number:</span>
+                <span id="currentNumber" class="current-number">--</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Game Status:</span>
+                <span id="gameStatus" class="status-waiting">Waiting</span>
+            </div>
+        </div>
+
+        <div class="game-content">
+            <div class="called-numbers-section">
+                <h3>Called Numbers</h3>
+                <div id="calledNumbers" class="called-numbers-grid"></div>
+            </div>
+
+            <div class="bingo-card-section">
+                <div class="bingo-card">
+                    <div class="bingo-header">
+                        <div class="bingo-letter" data-letter="B">B</div>
+                        <div class="bingo-letter" data-letter="I">I</div>
+                        <div class="bingo-letter" data-letter="N">N</div>
+                        <div class="bingo-letter" data-letter="G">G</div>
+                        <div class="bingo-letter" data-letter="O">O</div>
+                    </div>
+                    <div id="bingoGrid" class="bingo-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-numbers">
+            <h3>Recently Called</h3>
+            <div id="recentNumbers" class="recent-numbers-list"></div>
+        </div>
+
+        <div id="winMessage" class="win-message hidden">
+            <div class="win-content">
+                <h2>🎉 BINGO! 🎉</h2>
+                <p>Congratulations! You've won!</p>
+                <button id="newGameBtn" class="btn btn-primary">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Elements -->
+    <audio id="numberSound" preload="auto">
+        <source src="assets/audio/number-call.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bingoSound" preload="auto">
+        <source src="assets/audio/bingo-sound.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="winSound" preload="auto">
+        <source src="assets/audio/win-fanfare.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="scripts/audio-controller.js"></script>
+    <script src="scripts/number-generator.js"></script>
+    <script src="scripts/bingo-card.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+</html>

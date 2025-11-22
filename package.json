@@ -1,0 +1,17 @@
+{
+  "name": "telegram-bingo-miniapp",
+  "version": "1.0.0",
+  "description": "Bingo Game Telegram Mini App",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s . -p 3000",
+    "build": "echo 'No build step needed for static app'",
+    "dev": "serve -s . -l 3000"
+  },
+  "keywords": ["telegram", "mini-app", "bingo", "game"],
+  "author": "Genanaw Mekete",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}

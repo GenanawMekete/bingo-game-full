@@ -1,0 +1,58 @@
+{
+  "name": "bingo-backend",
+  "version": "1.0.0",
+  "description": "Multiplayer Bingo Game Backend with Telegram Mini App",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "migrate": "node database/migrate.js",
+    "seed": "node database/seed.js",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1",
+    "mongoose": "^7.5.0",
+    "redis": "^4.6.7",
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "uuid": "^9.0.0",
+    "node-cron": "^3.0.2",
+    "axios": "^1.5.0",
+    "winston": "^3.10.0",
+    "express-rate-limit": "^6.8.1",
+    "validator": "^13.11.0",
+    "telegraf": "^4.14.0",
+    "node-telegram-bot-api": "^0.64.0",
+    "stripe": "^13.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.6.1",
+    "supertest": "^6.3.3",
+    "eslint": "^8.47.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "bingo",
+    "telegram",
+    "mini-app",
+    "multiplayer",
+    "game",
+    "socket.io"
+  ]
+}
