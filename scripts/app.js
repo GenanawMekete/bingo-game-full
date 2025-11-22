@@ -27,6 +27,8 @@ class BingoMiniApp {
         
         // Try to load from localStorage
         const savedData = localStorage.getItem(`bingo_user_${tgUser.id}`);
+
+        const socket = io('https://bingo-backend.onrender.com');
         
         if (savedData) {
             this.userData = JSON.parse(savedData);
